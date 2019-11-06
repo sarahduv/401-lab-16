@@ -19,8 +19,8 @@ async function handleUpdate(text) {
   try {
     await writeFilePromise( file, Buffer.from(text)); 
     events.emit('write_done');
-  } catch (err) {
-    events.emit('write_error', err);
+  } catch (error) {
+    events.emit('write_error', error);
   }
 }
 

@@ -2,7 +2,7 @@
 
 module.exports = exports = {};
 
-var fileContents = '';
+var fileContents = 'helloworld';
 
 exports.readFile = (file, cb) => {
   if (file.match(/bad/i)) {
@@ -14,7 +14,7 @@ exports.readFile = (file, cb) => {
 };
 
 exports.writeFile = (file, buffer, cb) => {
-  if (file.match(/bad/i)) {
+  if (file.match(/badTwo/i)) {
     cb('Invalid File');
   }
   else {
