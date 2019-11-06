@@ -19,7 +19,7 @@ async function readTheFile(file) {
     const data = await readFilePromise(file);
     events.emit('read_done', data);
   } catch (error) {
-    events.emit('read_error', err);
+    events.emit('read_error', error);
   }
 }
 
